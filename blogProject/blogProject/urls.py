@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views.auth_views import Auth
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('signup/',Auth.as_view, name='createUser'),
 ]
